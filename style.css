@@ -1,0 +1,543 @@
+:root{
+    --bg: #3d0000;
+    --card: #580000;
+    --main-text: #F5EAEA;
+    --sec-text: #C9AAAA;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@keyframes pudar{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes pudar-kanan{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pudar-kiri{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--main-text);
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    padding: 1.8rem 2%;
+    background-color: #5f0000a6;
+    backdrop-filter: blur(10px);
+    border-bottom: solid 1px #130000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    width: auto;
+    height: 80px;
+}
+
+.logo img{
+    max-width: 100%;
+    width: 230px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+
+    animation: pudar-kanan .7s ease forwards ;
+}
+
+nav a{
+    display: inline-block;
+    font-weight: 500;
+    padding: .8rem;
+    border-radius: 15px;
+
+    transition: 
+        background-color .3s ease;
+
+    animation: pudar-kiri .7s ease forwards;
+}
+
+nav a:hover{
+    border-radius: 15px;
+    background-color: #a80000;
+    cursor: pointer;
+}
+
+.hero{
+    padding: clamp(2rem, 5vw, 4rem);
+
+    width: 100%;
+    height: 550px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url("asset/banner-hero.png");
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-content h1{
+    font-size: clamp(35px, 5vw, 60px);
+    margin-top: 0;
+    padding-top: 0;
+
+    opacity: 0;
+    animation: pudar-kanan .7s ease .3s forwards;
+}
+
+.hero-content p{
+    font-size: 16px;
+    max-width: 700px;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    animation: pudar-kiri .7s ease .4s forwards;
+}
+
+.hero-content a{
+    background-color: #a80000;
+    border-radius: 20px;
+
+    display: inline-block;
+    max-width: 100%;
+    width: 335px;
+    padding: .3rem 1% .4rem 1%;
+
+    text-align: center;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 20px;
+
+    transition: 
+        background-color .3s ease,
+        color .3s ease;
+
+    opacity: 0;
+    animation: pudar-kanan .7s ease .5s forwards;
+}
+
+.hero-content a:hover{
+    background-color: #fffefe;
+    color: #1d0000;
+    cursor: pointer;
+}
+
+.anime{
+    padding: clamp(2rem, 5vw, 4rem);
+}
+
+.description h2{
+    font-size: clamp(28px, 3vw, 40px);
+
+    opacity: 0;
+    animation: pudar-kanan .7s ease .6s forwards;
+}
+
+.description p{
+    font-size: 16px;
+    margin-bottom: 40px;
+
+    opacity: 0;
+    animation: pudar-kiri .7s ease .7s forwards;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.card-anime{
+    background-color: var(--card);
+    border-radius: 15px;
+    border: solid 1px rgb(139, 0, 0);
+
+    width: 100%;
+    max-width: 250px;
+    padding: 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.card-anime:first-child{
+    opacity: 0;
+    animation: pudar .7s ease .8s forwards;
+}
+
+.card-anime:nth-child(2){
+    opacity: 0;
+    animation: pudar .7s ease .9s forwards;
+}
+
+.card-anime:nth-child(3){
+    opacity: 0;
+    animation: pudar .7s ease 1s forwards;
+}
+
+.card-anime:nth-child(4){
+    opacity: 0;
+    animation: pudar .7s ease 1.1s forwards;
+}
+
+.card-anime:nth-child(5){
+    opacity: 0;
+    animation: pudar .7s ease 1.2s forwards;
+}
+
+.card-anime:nth-child(6){
+    opacity: 0;
+    animation: pudar .7s ease 1.3s forwards;
+}
+
+.card-anime:nth-child(7){
+    opacity: 0;
+    animation: pudar .7s ease 1.4s forwards;
+}
+
+.card-anime:nth-child(8){
+    opacity: 0;
+    animation: pudar .7s ease 1.5s forwards;
+}
+
+.card-anime:nth-child(9){
+    opacity: 0;
+    animation: pudar .7s ease 1.6s forwards;
+}
+
+.card-anime:nth-child(10){
+    opacity: 0;
+    animation: pudar .7s ease 1.7s forwards;
+}
+
+.card-anime:nth-child(11){
+    opacity: 0;
+    animation: pudar .7s ease 1.8s forwards;
+}
+
+.card-anime:nth-child(12){
+    opacity: 0;
+    animation: pudar .7s ease 1.9s forwards;
+}
+
+.card-anime:nth-child(13){
+    opacity: 0;
+    animation: pudar .7s ease 2s forwards;
+}
+
+.card-anime:nth-child(14){
+    opacity: 0;
+    animation: pudar .7s ease 2.1s forwards;
+}
+
+.card-anime:nth-child(15){
+    opacity: 0;
+    animation: pudar .7s ease 2.2s forwards;
+}
+
+.card-anime:nth-child(16){
+    opacity: 0;
+    animation: pudar .7s ease 2.3s forwards;
+}
+
+.card-anime:nth-child(17){
+    opacity: 0;
+    animation: pudar .7s ease 2.4s forwards;
+}
+
+.card-anime:nth-child(18){
+    opacity: 0;
+    animation: pudar .7s ease 2.5s forwards;
+}
+
+.card-anime:nth-child(19){
+    opacity: 0;
+    animation: pudar .7s ease 2.6s forwards;
+}
+
+.card-anime:nth-child(20){
+    opacity: 0;
+    animation: pudar .7s ease 2.7s forwards;
+}
+
+.card-anime:nth-child(21){
+    opacity: 0;
+    animation: pudar .7s ease 2.8s forwards;
+}
+
+.card-anime:nth-child(22){
+    opacity: 0;
+    animation: pudar .7s ease 2.9s forwards;
+}
+
+.card-anime:nth-child(23){
+    opacity: 0;
+    animation: pudar .7s ease 3s forwards;
+}
+
+.card-anime:nth-child(24){
+    opacity: 0;
+    animation: pudar .7s ease 3.1s forwards;
+}
+
+.card-anime:nth-child(25){
+    opacity: 0;
+    animation: pudar .7s ease 3.2s forwards;
+}
+
+.card-anime:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px #000000;
+}
+
+.card-anime img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: solid 1px #424242;
+
+    transition: transform .3s ease;
+}
+
+.card-anime img:hover{
+    transform: scale(1.05);
+}
+
+.card-anime h3{
+    font-size: 19px;
+    margin-top: 7px;
+}
+
+.card-anime p{
+    font-size: 12px;
+    color: var(--sec-text);
+}
+
+.card-anime a{
+    background-color: #130000;
+    padding: .3rem 35px .4rem 35px;
+    border-radius: 20px;
+    border: solid 1px rgb(49, 49, 49);
+    font-weight: 500;
+
+    margin-top: 30px;
+
+    transition: 
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+.card-anime a:hover{
+    background-color: var(--main-text);
+    color: #130000;
+    transform: scale(1.05);
+}
+
+.genres-anime{
+    padding: clamp(2rem, 5vw, 4rem);
+    background-color: #2c0000;
+}
+
+.genres-anime h2{
+    margin-bottom: 40px;
+}
+
+.genre-container{
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    gap: 15px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.genre-container li{
+    border: solid 2px #a80000;
+    padding: .7rem;
+    border-radius: 20px;
+
+    transition: 
+        background-color .3s ease,
+        transform .3s ease;
+}
+
+.genre-container li:hover{
+    background-color: #ff4c4c7a;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.ongoing-anime{
+    padding: clamp(2rem, 5vw, 4rem);
+}
+
+.completed-anime{
+    padding: clamp(2rem, 5vw, 4rem);
+    background-color: #2c0000;
+}
+
+.about{
+    padding: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+}
+
+.about h2{
+    font-size: clamp(28px, 3vw, 40px);
+    margin-bottom: 40px;
+}
+
+.about-me p{
+    margin-bottom: 20px;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact{
+    display: flex;
+    gap: 5px;
+    border: solid 2px #a50000;
+    padding: .3rem;
+    border-radius: 7px;
+
+    transition: 
+        transform .3s ease;
+}
+
+.contact:hover{
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.contact a{
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 
+        color .3s ease,
+        transform .3s ease;
+}
+
+.contact a:hover{
+    color: #d30000;
+    cursor: pointer;
+}
+
+footer{
+    background-color: #550000;
+    padding: 2rem;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (max-width:972px){
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img{
+        margin: 0 auto;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:478px){
+    .hero{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content{
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-content a{
+        margin-left: 4px;
+    }
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
